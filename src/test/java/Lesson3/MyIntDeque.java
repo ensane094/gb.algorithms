@@ -15,8 +15,8 @@ public class MyIntDeque {
         this.front = 0;
         this.rear = -1;
         this.items = 0;
-        this.leftPointer = this.rear - 1;
-        this.rightPointer = this.front + 1;
+        this.leftPointer = this.front - 1;
+        this.rightPointer = this.rear + 1;
     }
 
     public boolean isEmpty() {
