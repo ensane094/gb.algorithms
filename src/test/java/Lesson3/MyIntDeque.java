@@ -13,7 +13,7 @@ public class MyIntDeque {
         this.size = size;
         this.deQue = new int[size];
         this.front = 0;
-        this.rear = -1;
+        this.rear = this.size - 1;
         this.items = 0;
         this.leftPointer = this.front - 1;
         this.rightPointer = this.rear + 1;
@@ -33,17 +33,21 @@ public class MyIntDeque {
 
 
     public void insertLeft(int i) {
-        if (rightPointer==rear) {
+        if (leftPointer == -1) {
             front = 1;
+            leftPointer = 0;
         }
+        leftPointer--;
         deQue[--front] = i;
         items++;
     }
 
     public void insertRight(int i) {
-        if (leftPointer == size) {
-            rear = -1;
+        if (rightPointer == size) {
+            rear = size - 2;
+            rightPointer = size - 1;
         }
+        rightPointer++;
         deQue[++rear] = i;
         items++;
     }
