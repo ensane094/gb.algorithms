@@ -4,7 +4,8 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-
+        Brackets test = new Brackets("((){}{}[][]");
+        System.out.println(test.check());
     }
 
     static String reverseRead (String string){
