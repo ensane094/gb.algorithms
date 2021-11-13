@@ -5,12 +5,16 @@
 <?import javafx.scene.layout.VBox?>
 
 <?import javafx.scene.control.Button?>
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="com.example.chatwindow.Controller">
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TextArea?>
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.chatwindow.Controller">
     <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+        <Insets bottom="4" top="4" left="4" right="4"/>
     </padding>
-
-    <Label fx:id="welcomeText"/>
-    <Button text="Hello!" onAction="#onHelloButtonClick"/>
+    <TextArea fx:id="TextArea" VBox.vgrow="ALWAYS" editable="false"/>
+    <HBox spacing="3">
+        <TextField fx:id="TextField" HBox.hgrow="ALWAYS" />
+        <Button text="Отправить" onAction="#SendButton" defaultButton="true"/>
+    </HBox>
 </VBox>
